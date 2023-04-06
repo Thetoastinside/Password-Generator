@@ -20,7 +20,7 @@ var upperCaseArray = [  'A',  'B',  'C',  'D',  'E',  "F",  'G',  'H',  'I',  'J
 
 
 var possibleCharacters = []
-
+var randomPassword = []
 function generatePassword() {
   var pwlength = prompt('how long would you like your password to be?')
   var numbers = confirm('would you like numbers in your pasword?')
@@ -35,10 +35,23 @@ if (special === true) {
   possibleCharacters = possibleCharacters.concat(specialArray)
 }
 if (lower === true) {
-  possibleCharacters = possibleCharacters.concat(lowerArray)
+  possibleCharacters = possibleCharacters.concat(lowerCaseArray)
 }
 if (upper === true) {
-  possibleCharacters = possibleCharacters.concat(upperArray)
+  possibleCharacters = possibleCharacters.concat(upperCaseArray)
 }
+
+console.log(possibleCharacters)
+
+for(var i = 0; i < pwlength; i++) {
+  var getIndex = Math.floor(Math.random()*possibleCharacters.length)
+  var indexValue = possibleCharacters[getIndex]
+  randomPassword.push(indexValue)
+  console.log(randomPassword)
+}
+
+
+
+
   return "hello"
 }
