@@ -19,7 +19,7 @@ var lowerCaseArray = [  'a',  'b',  'c',  'd',  'e',  "f",  'g',  'h',  'i',  'j
 var upperCaseArray = [  'A',  'B',  'C',  'D',  'E',  "F",  'G',  'H',  'I',  'J',  'K',  'L',  'M',  'N', 'O',  'P',  'Q',  'R',  'S',  'R',  'U',  'V',  'W',  'X',  'Y',  'Z'];
 
 
-
+var possibleCharacters = []
 
 function generatePassword() {
   var pwlength = prompt('how long would you like your password to be?')
@@ -28,6 +28,17 @@ function generatePassword() {
   var lower = confirm('would you like lower case letters?')
   var upper = confirm('would you like upper case letters?')
 
-
+if (numbers === true) {
+  possibleCharacters = possibleCharacters.concat(numericArray)
+}
+if (special === true) {
+  possibleCharacters = possibleCharacters.concat(specialArray)
+}
+if (lower === true) {
+  possibleCharacters = possibleCharacters.concat(lowerArray)
+}
+if (upper === true) {
+  possibleCharacters = possibleCharacters.concat(upperArray)
+}
   return "hello"
 }
