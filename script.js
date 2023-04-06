@@ -23,6 +23,14 @@ var possibleCharacters = []
 var randomPassword = []
 function generatePassword() {
   var pwlength = prompt('how long would you like your password to be?')
+  if (pwlength < 8) {
+    alert('Password must be at least 8 characters')
+    return
+  }
+  if (pwlength > 128) {
+    alert('Password must be under 128 characters')
+    return
+  }
   var numbers = confirm('would you like numbers in your pasword?')
   var special = confirm('would you like special characters?')
   var lower = confirm('would you like lower case letters?')
@@ -53,5 +61,5 @@ for(var i = 0; i < pwlength; i++) {
 
 
 
-  return "hello"
+  return randomPassword.join("")
 }
