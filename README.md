@@ -13,3 +13,6 @@ SO THAT I can create a strong password that provides greater security
 ```
 
 
+### Screenshots:
+
+![Screenshot 1](./Screenshot%20(110).png)
